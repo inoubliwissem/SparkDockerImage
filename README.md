@@ -28,7 +28,9 @@ Start the spark services (master and workers):
 Check if all services are started :  
 
     spark@localhost:~$ jps   
-    352 Jps
-320 Worker
-263 Master
+    352 Jps   
+    320 Worker   
+    263 Master  
+  Check if all services are started using the Spark GUI :
+  ![alt text](sparkDoc.png "apache spark GUI")
 
