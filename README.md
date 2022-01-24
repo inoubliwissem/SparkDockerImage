@@ -36,10 +36,10 @@ Check if all services are started :
 
 ## Deploy a Spark cluster using the current docker image   
 The next architecture shows the configuration using docker
- ![alt text](arch.png "acrhitecture")
+ ![alt text](architecture.png "acrhitecture")
 
   In this architecture we have:
-  -Spark Image
-  -two containers (master and worker) from the spark image
-  -A local virtual network (cluster)
+  *  Spark Image
+  *  two containers (master and worker) from the spark image
+  *  A local virtual network (cluster)
   
