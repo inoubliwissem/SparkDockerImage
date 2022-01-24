@@ -42,4 +42,10 @@ The next architecture shows the configuration using docker
   *  Spark Image
   *  two containers (master and worker) from the spark image
   *  A local virtual network (cluster)
-  
+## Create the virtual network
+
+        :~$ create --driver bridge cluster   
+## Create the containers (master, worker1)
+
+        :~$ sudo docker run -it --name master -p 7077:7077 -p 8080:8080 --hostname master --network cluster spark bash    
+        :~$ sudo docker run -it --name master -p  -p 8081:8081 --hostname worker1 --network cluster spark bash  
