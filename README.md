@@ -49,3 +49,14 @@ The next architecture shows the configuration using docker
 
         :~$ sudo docker run -it --name master -p 7077:7077 -p 8080:8080 --hostname master --network cluster spark bash    
         :~$ sudo docker run -it --name master -p  -p 8081:8081 --hostname worker1 --network cluster spark bash  
+## Edit the config. file in both containers (master, worker1):
+     spark@master:~$ cp /home/spark/spark/conf/workers.temlate  /home/spark/spark/conf/workers
+     spark@master:~$ cat master >>  /home/spark/spark/conf/workers   
+     spark@master:~$ cat worker1 >>  /home/spark/spark/conf/workers  
+     spark@master:~$ cp /home/spark/spark/conf/spark-defaults.conf.template /home/spark/spark/conf/spark-defaults.conf  
+     spark@master:~$ cat "spark.master    spark://master:7077 >>  /home/spark/spark/conf/spark-defaults.conf  
+     spark@master:~$ scp  /home/spark/spark/conf/spark-defaults.conf spark@worker1:/home/spark/spark/conf/  
+     spark@master:~$ scp  /home/spark/spark/conf/workers spark@worker1:/home/spark/spark/conf/  
+     spark@master:~$ ./spark/sbin/start-all.sh
+     
+
