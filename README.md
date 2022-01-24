@@ -57,6 +57,9 @@ The next architecture shows the configuration using docker
      spark@master:~$ cat "spark.master    spark://master:7077 >>  /home/spark/spark/conf/spark-defaults.conf  
      spark@master:~$ scp  /home/spark/spark/conf/spark-defaults.conf spark@worker1:/home/spark/spark/conf/  
      spark@master:~$ scp  /home/spark/spark/conf/workers spark@worker1:/home/spark/spark/conf/  
-     spark@master:~$ ./spark/sbin/start-all.sh
+     spark@master:~$ ./spark/sbin/start-all.sh  
      
+   ## The deployed cluster  
+The next figure shows the started cluster:
+ ![alt text](cluster.png "cluster")
 
